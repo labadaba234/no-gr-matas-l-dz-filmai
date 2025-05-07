@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="/">Sākums</a>
+                <a href="/romance"> Romantika</a>
+                <a href="/fantasy"> Fantāzija</a>
+                <a href="/mystery"> Mistērija/Detektīvi</a>
+                <a href="/thriller"> Trilleri</a>
+                <a href="/horror"> Šausmene</a>
+                <a href="/reviews">Atsauksmes</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Tīna Spriņģe</p>
+    </footer>
+</body>
+

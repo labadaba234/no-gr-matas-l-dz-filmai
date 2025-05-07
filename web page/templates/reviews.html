@@ -1,0 +1,16 @@
+<h1>Filmu atsauksmes</h1>
+<a href="/reviews/new">Pievienot atsauksmi</a>
+
+<ul>
+    {% for review in reviews %}
+    <li>
+        <strong>{{ review.name }}</strong>:<br>
+        {{ review.review }}
+        <br>
+        <a href="/reviews/edit/{{ review.id }}">Labot</a>
+        <form action="/reviews/delete/{{ review.id }}" method="POST" style="display:inline;">
+            <button type="submit">Dzēst</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
